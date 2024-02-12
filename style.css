@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0adcb;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.heart-container {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#message-container {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.455);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: height 1.5s ease;
+    max-height: 95vh;
+    min-width: 350px;
+    max-width: 98%;
+    margin: 20px auto;
+    -ms-overflow-style: none;
+}
+
+#message-container::-webkit-scrollbar {
+    display: none;
+}
+
+#message {
+    font-family: 'Cormorant Garamond', serif;
+    max-width: 90%;
+    height: auto;
+    padding: 15px;
+    word-wrap: break-word;
+    font-size: 18px;
+    color: #564a4a;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #d10000;
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .heart-container {
+        position: fixed; /* o 'absolute', dependiendo de la estructura de tu HTML */
+        top: 50%; /* Centra verticalmente */
+        left: 50%; /* Centra horizontalmente */
+        transform: translate(-50%, -50%); /* Ajusta el centrado considerando las dimensiones del elemento */
+    }
+
+    #message {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heart-container {
+        top: 10px;
+    }
+
+    #message {
+        font-size: 14px;
+    }
+}
